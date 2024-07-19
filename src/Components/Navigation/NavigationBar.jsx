@@ -1,30 +1,30 @@
-import React from 'react';
 import './NavigationBar.css';
+import {NavLink} from "react-router-dom";
 
 function NavigationBar() {
     return (
         <>
             <nav>
                 <ul className="navBar1">
-                    <li className="appName">
-                        MTG Deckmaster
+                    <li>
+                        <NavLink to="/" className="appName">Deck Builder MTG</NavLink>
                     </li>
                 </ul>
                 <ul className="navBar2">
-                    <li className="button1">
-                        Search your card
+                    <li>
+                        <NavLink to="/search" className="button1">Search</NavLink>
                     </li>
-                    <li className="button1">
-                        Sign in
+                    <li>
+                        <NavLink to="/signup" className="button1">Sign up</NavLink>
                     </li>
-                    <li className="button1">
-                        Sign up
+                    <li>
+                        <NavLink to="/signin" className="button1">Sign in</NavLink>
                     </li>
-                    <li className="button1">
-                        Profile
+                    <li>
+                        <NavLink to="/profile" className="button1">Profile</NavLink>
                     </li>
-                    <li className="button1">
-                        Log out
+                    <li>
+                        <NavLink to="/" className="button1">Log out</NavLink>
                     </li>
                 </ul>
             </nav>
