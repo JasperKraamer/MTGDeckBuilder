@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.background {
+    background-image: url('/src/assets/mtg wallpaper.png'); /* Adjust the path as necessary */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    background: rgba(38, 38, 38, 0.88); /* Semi-transparent background */
+    padding: 60px 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: #fff;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    border: 2px solid white;
+    margin-left: 35px;
+    margin-bottom: 50px;
+
+}
+
+.form-container h2 {
+    margin-bottom: 60px;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+}
+
+.form-container button {
+    padding: 10px 20px;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.form-container button:hover {
+    background: #555;
+}
