@@ -1,10 +1,11 @@
+/* src/components/FormStyles.css */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
 
 .background {
-    background-image: url('/src/assets/mtg wallpaper.png'); /* Adjust the path as necessary */
+    background-image: url('src/assets/mtg wallpaper.png'); /* Adjust the path as necessary */
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -25,11 +26,10 @@ body {
     border: 2px solid white;
     margin-left: 35px;
     margin-bottom: 50px;
-
 }
 
 .form-container h2 {
-    margin-bottom: 60px;
+    margin-bottom: 20px;
 }
 
 .form-container label {
