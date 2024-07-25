@@ -15,7 +15,6 @@ const SignIn = () => {
         try {
             const response = await authenticateUser(username, password);
             localStorage.setItem('token', response.jwt);
-            alert('Login successful!');
             setPassword(''); // Clear the password field
             navigate('/Profile');
         } catch (error) {

@@ -1,0 +1,40 @@
+/* src/components/NotFound.css */
+.error-container {
+    text-align: center;
+    padding: 50px;
+}
+
+.error-container h1 {
+    font-size: 102px;
+    margin-bottom: 20px;
+}
+
+.error-container p {
+    font-size: 44px;
+    margin-bottom: 20px;
+}
+
+.error-container a {
+    font-size: 28px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.error-container a:hover {
+    text-decoration: underline;
+}
+
+.error-container {
+background: rgba(38, 38, 38, 0.88); /* Semi-transparent background */
+padding: 60px 40px;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+color: #fff;
+max-width: 600px;
+width: 100%;
+text-align: center;
+border: 2px solid white;
+margin-left: 35px;
+margin-bottom: 50px;
+    height: 500px;
+}
