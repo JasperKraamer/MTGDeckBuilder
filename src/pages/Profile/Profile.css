@@ -1,0 +1,83 @@
+.background {
+    display: flex;
+    height: 100vh;
+}
+
+.left {
+    width: 20%; /* 2/10 van de breedte */
+    height: 100%; /* Volledige hoogte van de pagina */
+    background-color: lightgray;
+    background: rgba(38, 38, 38, 0.88); /* Semi-transparent background */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: center;
+    border: 2px solid white;
+    margin-top: 265px;
+    margin-bottom: 225px;
+    margin-left: 25px;
+    padding-top: -210px;
+}
+
+.right {
+    width: 80%; /* 8/10 van de breedte */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-top: 35px;
+}
+
+.top-right, .bottom-right {
+    flex: 1; /* Beide velden nemen evenveel ruimte in */
+    background: rgba(38, 38, 38, 0.88); /* Semi-transparent background */
+    padding: 10px 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: #fff;
+    max-width: 90%;
+    width: 100%;
+    text-align: center;
+    border: 2px solid white;
+    margin-left: 35px;
+    margin-bottom: 50px;
+}
+
+.favorites-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.favorites-list .card {
+    margin: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 150px;
+    text-align: center;
+}
+
+.card img {
+    max-width: 100%;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+button {
+    margin: 5px;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+button.active {
+    background-color: #666;
+    color: white;
+}

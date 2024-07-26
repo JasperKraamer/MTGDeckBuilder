@@ -1,0 +1,32 @@
+input, select {
+    margin: 5px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+button {
+    margin: 5px;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.search-container {
+    background: rgba(38, 38, 38, 0.88); /* Semi-transparent background */
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: #fff;
+    width: calc(100% - 80px); /* Full width minus padding */
+    text-align: center;
+    border: 2px solid white;
+    margin: 0 auto 50px auto;
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}

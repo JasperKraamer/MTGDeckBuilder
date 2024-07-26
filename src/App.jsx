@@ -10,6 +10,7 @@ import Search from "./Pages/Search/Search.jsx";
 import Teaser from "./Components/Teaser/Teaser.jsx"
 import Footer from "./Components/Footer/Footer.jsx"
 
+
 function App() {
     return (
     <>

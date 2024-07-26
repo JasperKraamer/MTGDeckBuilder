@@ -1,0 +1,15 @@
+
+.card {
+    margin: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.card img {
+    max-width: 100%;
+}
+.card-list {
+    display: flex;
+    flex-wrap: wrap;
+}

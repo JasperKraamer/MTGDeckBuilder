@@ -1,9 +1,16 @@
-function Profile() {
+import './Profile.css'
+
+function Home() {
     return (
-        <>
-            <h2>Profile page</h2>
-        </>
-    )
+        <div className="background">
+        <div className="left">Profile</div>
+    <div className="right">
+        <div className="top-right">My Favorites</div>
+        <div className="bottom-right">My Deck</div>
+    </div>
+        </div>
+
+)
 }
 
-export default Profile;
+export default  Home;

@@ -1,0 +1,106 @@
+/* src/App.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+.card-list {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    justify-items: center;
+}
+
+.card {
+    margin: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    cursor: pointer;
+    width: 180px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.card img {
+    max-width: 100%;
+}
+
+.card-placeholder {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+}
+
+input, select {
+    justify-content: space-evenly;
+    margin: 5px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    background: #333;
+    color: #fff;
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #555;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+button.active {
+    background-color: #666;
+    color: white;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.search-result {
+    background: rgba(38, 38, 38, 0.88);
+    padding: 40px 80px;
+    border-radius: 10px;
+    border: 2px solid white;
+
+}
+
+.search-container {
+    background: rgba(38, 38, 38, 0.88); /* Semi-transparent background */
+    padding: 40px 100px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: #fff;
+    max-width: 90%;
+    text-align: center;
+    border: 2px solid white;
+    margin: 0 auto 50px auto;
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+.search-container input, select{
+        width: 20%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: none;
+        border-radius: 5px;
+}
+
