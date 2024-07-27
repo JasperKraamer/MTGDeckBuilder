@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import CardList from '../../Components/CardList.jsx';
 import Pagination from '../../Components/Pagination.jsx';
+import Modal from '../../Components/Modal/Modal.jsx'
 
 const CardSearch = () => {
     const [name, setName] = useState('');
@@ -12,6 +13,7 @@ const CardSearch = () => {
     const [page, setPage] = useState(1);
     const [pageSize] = useState(14);
     const [totalCount, setTotalCount] = useState(0);
+    const [selectedCard, setSelectedCard] = useState(null);
 
     const cardTypes = [
         "Artifact",
@@ -20,13 +22,9 @@ const CardSearch = () => {
         "Enchantment",
         "Instant",
         "Land",
-        "Phenomenon",
         "Plane",
         "Planeswalker",
-        "Scheme",
         "Sorcery",
-        "Tribal",
-        "Vanguard"
     ];
 
     const searchCards = async () => {
@@ -47,44 +45,74 @@ const CardSearch = () => {
         searchCards();
     }, [page]);
 
+    const closeModal = () => {
+        setSelectedCard(null);
+    };
+
+    const addToFavorites = (card) => {
+        const savedCards = JSON.parse(localStorage.getItem('savedCards')) || [];
+        if (!savedCards.some(savedCard => savedCard.id === card.id)) {
+            savedCards.push(card);
+            localStorage.setItem('savedCards', JSON.stringify(savedCards));
+        }
+    };
+
+    const addToDeck = (card) => {
+        const savedDeck = JSON.parse(localStorage.getItem('savedDeck')) || {};
+        if (!savedDeck[card.type]) {
+            savedDeck[card.type] = [];
+        }
+        if (!savedDeck[card.type].some(savedCard => savedCard.id === card.id)) {
+            savedDeck[card.type].push({ id: card.id, name: card.name });
+            localStorage.setItem('savedDeck', JSON.stringify(savedDeck));
+        }
+    };
+
     return (
-        <container className="background">
-        <div>
-            <div className="search-container">
-                <input
-                    placeholder="Search Card Name"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                />
-                <input
-                    placeholder="Search Set Name"
-                    value={set}
-                    onChange={(e) => setSet(e.target.value)}
-                />
-                <select
-                    value={type}
-                    onChange={(e) => setType(e.target.value)}
-                >
-                    <option value="">Select Card Type</option>
-                    {cardTypes.map((type) => (
-                        <option key={type} value={type}>
-                            {type}
-                        </option>
+        <div className="background">
+            <div className='page-content'>
+                <div className="search-container">
+                    <input
+                        placeholder="Search Card Name"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                    />
+                    <input
+                        placeholder="Search Set Name"
+                        value={set}
+                        onChange={(e) => setSet(e.target.value)}
+                    />
+                    <select
+                        value={type}
+                        onChange={(e) => setType(e.target.value)}
+                    >
+                        <option value="">Select Type</option>
+                        {cardTypes.map((cardType) => (
+                            <option key={cardType} value={cardType}>{cardType}</option>
+                        ))}
+                    </select>
+                    <button onClick={() => { setPage(1); searchCards(); }}>Search</button>
+                </div>
+                <section className='kaartjes'>
+                <div className="search-result">
+                    {cards.map(card => (
+                        <div key={card.id} className="card-item">
+                            {card.imageUrl && <img src={card.imageUrl} alt={card.name} />}
+                            <button onClick={() => addToFavorites(card)}>Add to Favorites</button>
+                            <button onClick={() => addToDeck(card)}>Add to Deck</button>
+                        </div>
                     ))}
-                </select>
-                <button onClick={searchCards}>Search</button>
-            </div>
-            <div className="search-result">
-            <CardList cards={cards} />
-            <Pagination
-                totalCount={totalCount}
-                pageSize={pageSize}
-                currentPage={page}
-                onPageChange={setPage}
-            />
+                </div>
+                </section>
+                <Pagination
+                    totalCount={totalCount}
+                    pageSize={pageSize}
+                    currentPage={page}
+                    onPageChange={setPage}
+                />
+                <Modal card={selectedCard} onClose={closeModal} />
             </div>
         </div>
-</container>
     );
 };
 

@@ -9,11 +9,13 @@ import NotFound from "./Pages/NotFound/NotFound.jsx";
 import Search from "./Pages/Search/Search.jsx";
 import Teaser from "./Components/Teaser/Teaser.jsx"
 import Footer from "./Components/Footer/Footer.jsx"
+// import {CardProvider} from './Context/Context.jsx'
 
 
 function App() {
     return (
     <>
+        {/*<CardProvider>*/}
         <NavigationBar />
         <Teaser />
 
@@ -27,6 +29,7 @@ function App() {
         </Routes>
 
         <Footer />
+        {/*</CardProvider>*/}
     </>
   )
 }
