@@ -1,0 +1,90 @@
+ .background {
+    display: flex;
+    height: 100vh;
+}
+
+.left {
+    width: 20%;
+    height: 100%;
+    background: rgba(38, 38, 38, 0.88);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: rgba(255, 255, 255, 100);
+    text-align: center;
+    border: 2px solid rgba(255, 255, 255, 100);
+    margin-top: 265px;
+    margin-bottom: 225px;
+    margin-left: 25px;
+    max-width: 300px;
+}
+
+.right {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-top: 35px;
+}
+
+.top-right, .bottom-right {
+    flex: 1;
+    background: rgba(38, 38, 38, 0.88);
+    padding: 10px 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: rgba(255, 255, 255, 100);
+    max-width: 90%;
+    width: 100%;
+    text-align: center;
+    border: 2px solid rgba(255, 255, 255, 100);
+    margin-left: 35px;
+    margin-bottom: 50px;
+}
+
+.top-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.favorites-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.favorites-list .card {
+    margin: 10px;
+    border: 1px solid rgba(255, 255, 255, 100);
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+}
+
+.card img {
+    max-width: 100%;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.pagination button {
+    margin: 5px;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.pagination button.active {
+    background-color: rgba(102, 102, 102, 100);
+    color: rgba(255, 255, 255, 100);
+}
+
+.pagination button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+

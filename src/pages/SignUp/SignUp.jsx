@@ -49,7 +49,7 @@ const SignUp = () => {
             try {
                 const response = await registerUser(username, email, password);
                 alert('Registration successful!');
-                navigate('/SignIn'); // Navigeren naar de loginpagina na registratie
+                navigate('/SignIn');
             } catch (error) {
                 alert('Registration failed');
             }
