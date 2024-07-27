@@ -1,10 +1,10 @@
 .Teaser-bar {
     display: flex;
     justify-content: space-around;
-    background-color: #000000; /* Donkere achtergrondkleur */
+    background-color: #000000;
     padding: 5px 0;
 }
 
 .Teaser-font {
-    color: white;
+    color: rgba(255, 255, 255, 100);
 }

@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import './Profile.css';
+import Modal from '../../Components/Modal/Modal.jsx';
 
 const Profile = () => {
     const [savedCards, setSavedCards] = useState([]);
     const [savedDeck, setSavedDeck] = useState({});
     const [currentPage, setCurrentPage] = useState(1);
+    const [selectedCard, setSelectedCard] = useState(null);
     const cardsPerPage = 5;
 
     useEffect(() => {
@@ -31,15 +33,16 @@ const Profile = () => {
         localStorage.setItem('savedDeck', JSON.stringify(updatedDeck));
     };
 
-    // Calculate indices for slicing
+    const closeModal = () => {
+        setSelectedCard(null);
+    };
+
     const indexOfLastCard = currentPage * cardsPerPage;
     const indexOfFirstCard = indexOfLastCard - cardsPerPage;
     const currentCards = savedCards.slice(indexOfFirstCard, indexOfLastCard);
 
-    // Change page
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
-    // Determine total pages
     const totalPages = Math.ceil(savedCards.length / cardsPerPage);
 
     return (
@@ -50,10 +53,10 @@ const Profile = () => {
                     My Favorites
                     <div className="favorites-list">
                         {currentCards.map(card => (
-                            <div key={card.id} className="card">
+                            <div key={card.id} className="card" onClick={() => setSelectedCard(card)}>
                                 <img src={card.imageUrl} alt={card.name} />
                                 <p>{card.name}</p>
-                                <button onClick={() => removeFavorite(card.id)}>Remove</button>
+                                <button onClick={(e) => { e.stopPropagation(); removeFavorite(card.id); }}>Remove</button>
                             </div>
                         ))}
                     </div>
@@ -76,9 +79,9 @@ const Profile = () => {
                             <h3>{type}</h3>
                             <ul>
                                 {savedDeck[type].map(card => (
-                                    <li key={card.id}>
+                                    <li key={card.id} onClick={() => setSelectedCard(card)}>
                                         {card.name}
-                                        <button onClick={() => removeDeckCard(type, card.id)}>Remove</button>
+                                        <button onClick={(e) => { e.stopPropagation(); removeDeckCard(type, card.id); }}>Remove</button>
                                     </li>
                                 ))}
                             </ul>
@@ -86,6 +89,7 @@ const Profile = () => {
                     ))}
                 </div>
             </div>
+            <Modal card={selectedCard} onClose={closeModal} />
         </div>
     );
 };

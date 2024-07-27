@@ -1,5 +1,4 @@
-/* Zorg ervoor dat de achtergrond en de hoofdlayout correct zijn */
-.background {
+ .background {
     display: flex;
     height: 100vh;
 }
@@ -10,12 +9,13 @@
     background: rgba(38, 38, 38, 0.88);
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    color: #fff;
+    color: rgba(255, 255, 255, 100);
     text-align: center;
-    border: 2px solid white;
+    border: 2px solid rgba(255, 255, 255, 100);
     margin-top: 265px;
     margin-bottom: 225px;
     margin-left: 25px;
+    max-width: 300px;
 }
 
 .right {
@@ -32,16 +32,15 @@
     padding: 10px 40px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    color: #fff;
+    color: rgba(255, 255, 255, 100);
     max-width: 90%;
     width: 100%;
     text-align: center;
-    border: 2px solid white;
+    border: 2px solid rgba(255, 255, 255, 100);
     margin-left: 35px;
     margin-bottom: 50px;
 }
 
-/* Flexbox voor de kaarten in top-right */
 .top-right {
     display: flex;
     flex-direction: column;
@@ -56,7 +55,7 @@
 
 .favorites-list .card {
     margin: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid rgba(255, 255, 255, 100);
     padding: 20px;
     width: 200px;
     text-align: center;
@@ -66,7 +65,6 @@
     max-width: 100%;
 }
 
-/* Pagineringstijl */
 .pagination {
     display: flex;
     justify-content: center;
@@ -81,11 +79,12 @@
 }
 
 .pagination button.active {
-    background-color: #666;
-    color: white;
+    background-color: rgba(102, 102, 102, 100);
+    color: rgba(255, 255, 255, 100);
 }
 
 .pagination button:disabled {
     cursor: not-allowed;
     opacity: 0.5;
 }
+
