@@ -1,9 +1,16 @@
-function NotFound() {
+import React from 'react';
+import './NotFound.css';
+
+const NotFound = () => {
     return (
-        <main className="page-container-not-found">
-            <h2>Oops... This page does not exist</h2>
-        </main>
-    )
+        <div className="background">
+        <div className="error-container">
+            <h1>404</h1>
+            <p>This page does not excist</p>
+            <a href="/">Go Back to Home</a>
+        </div>
+        </div>
+    );
 }
 
-export default  NotFound;
+export default NotFound;
