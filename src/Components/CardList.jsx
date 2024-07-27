@@ -1,5 +1,4 @@
-// src/components/CardList.jsx
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Card from './Card/Card.jsx';
 import CardModal from './Modal/Modal.jsx';
 

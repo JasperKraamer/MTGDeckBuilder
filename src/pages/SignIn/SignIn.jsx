@@ -1,5 +1,5 @@
 import './SignIn.css';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { authenticateUser } from '../../api.js';
 
@@ -15,11 +15,11 @@ const SignIn = () => {
         try {
             const response = await authenticateUser(username, password);
             localStorage.setItem('token', response.jwt);
-            setPassword(''); // Clear the password field
-            navigate('/Profile');
+            setPassword('');
+            navigate('/profile');
         } catch (error) {
             alert('Login failed: ' + (error.message || 'Please check your credentials.'));
-            setPassword(''); // Clear the password field
+            setPassword('');
         } finally {
             setIsLoading(false);
         }

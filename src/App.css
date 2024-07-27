@@ -42,7 +42,7 @@ input, select {
 
 button {
     padding: 10px 20px;
-    background: #333;
+    background: rgba(51, 51, 51, 100);
     color: rgba(255, 255, 255, 100);
     border: 1px solid rgba(255, 255, 255, 100);
     border-radius: 5px;
@@ -51,7 +51,7 @@ button {
 }
 
 button:hover {
-    background: #555;
+    background: rgba(85, 85, 85, 100);
 }
 
 button:disabled {
@@ -60,7 +60,7 @@ button:disabled {
 }
 
 button.active {
-    background-color: #666;
+    background-color: rgba(102, 102, 102, 100);
     color: rgba(255, 255, 255, 100);
 }
 

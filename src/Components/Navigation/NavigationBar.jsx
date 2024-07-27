@@ -1,12 +1,15 @@
 import './NavigationBar.css';
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 function NavigationBar() {
 
     const getToken = () => localStorage.getItem('token');
-    const handleLogout = () => {
-        localStorage.clear(); // Clear all localStorage items
-        history.push('/login'); // Redirect to the login page or home page
+
+    const navigate = useNavigate();
+    const handleLogout = (e) => {
+        e.preventDefault();
+        localStorage.clear();
+        navigate('/signin');
     };
 
     return (

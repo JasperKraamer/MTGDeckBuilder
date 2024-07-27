@@ -1,7 +1,5 @@
-// src/components/CardSearch.jsx
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import axios from 'axios';
-import CardList from '../../Components/CardList.jsx';
 import Pagination from '../../Components/Pagination.jsx';
 import Modal from '../../Components/Modal/Modal.jsx';
 
@@ -97,9 +95,18 @@ const CardSearch = () => {
                     <div className="search-result">
                         {cards.map(card => (
                             <div key={card.id} className="card-item" onClick={() => setSelectedCard(card)}>
-                                {card.imageUrl && <img src={card.imageUrl} alt={card.name} />}
-                                <button onClick={(e) => { e.stopPropagation(); addToFavorites(card); }}>Add to Favorites</button>
-                                <button onClick={(e) => { e.stopPropagation(); addToDeck(card); }}>Add to Deck</button>
+                                <h2>{card.name}</h2>
+                                {card.imageUrl && <img src={card.imageUrl} alt={card.name}/>}
+                                <button onClick={(e) => {
+                                    e.stopPropagation();
+                                    addToFavorites(card);
+                                }}>Add to Favorites
+                                </button>
+                                <button onClick={(e) => {
+                                    e.stopPropagation();
+                                    addToDeck(card);
+                                }}>Add to Deck
+                                </button>
                             </div>
                         ))}
                     </div>
