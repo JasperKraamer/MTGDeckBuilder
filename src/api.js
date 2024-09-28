@@ -1,10 +1,11 @@
 import axios from 'axios';
 
-const API_URL = 'https://api.datavortex.nl/deckbuildermtg';
+const API_URL = import.meta.env.VITE_API_URL;
+console.log(API_URL);
 
 const headers = {
     'Content-Type': 'application/json',
-    'X-Api-Key': 'deckbuildermtg:6rk6IsJiCtWHtF7OgI2B',
+    'X-Api-Key': import.meta.env.VITE_API_KEY,
 };
 
 // Functie om een gebruiker te registreren
