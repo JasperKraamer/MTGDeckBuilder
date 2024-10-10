@@ -57,7 +57,7 @@ const SignUp = () => {
     };
 
     return (
-        <div className="background">
+        <div className="register background">
             <div className="form-container">
                 <h2>Register</h2>
                 <form onSubmit={handleSubmit}>

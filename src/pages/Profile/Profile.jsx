@@ -46,7 +46,7 @@ const Profile = () => {
     const totalPages = Math.ceil(savedCards.length / cardsPerPage);
 
     return (
-        <div className="background">
+        <div className="profile background">
             <div className="left">Profile</div>
             <div className="right">
                 <div className="top-right">

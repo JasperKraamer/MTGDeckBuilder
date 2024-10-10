@@ -1,20 +1,22 @@
 import './SignIn.css';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { authenticateUser } from '../../api.js';
+import { AuthContext } from '../../contexts/AuthContext';
 
 const SignIn = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [isLoading, setIsLoading] = useState(false);
     const navigate = useNavigate();
+    const { login } = useContext(AuthContext);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         setIsLoading(true);
         try {
             const response = await authenticateUser(username, password);
-            localStorage.setItem('token', response.jwt);
+            login(response.jwt);
             setPassword('');
             navigate('/profile');
         } catch (error) {
@@ -26,7 +28,7 @@ const SignIn = () => {
     };
 
     return (
-        <div className="background">
+        <div className="login background">
             <div className="form-container">
                 <h2>Log In</h2>
                 <form onSubmit={handleSubmit}>
