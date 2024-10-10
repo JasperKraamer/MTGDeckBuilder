@@ -24,16 +24,16 @@
 }
 
 .error-container {
-background: rgba(38, 38, 38, 0.88);
-padding: 60px 40px;
-border-radius: 10px;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-color: rgba(255, 255, 255, 100);
-max-width: 600px;
-width: 100%;
-text-align: center;
-border: 2px solid rgba(255, 255, 255, 100);
-margin-left: 35px;
-margin-bottom: 50px;
+    background: rgba(38, 38, 38, 0.88);
+    padding: 60px 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: rgba(255, 255, 255, 100);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    border: 2px solid rgba(255, 255, 255, 100);
+    margin-left: 35px;
+    margin-bottom: 50px;
     height: 500px;
 }

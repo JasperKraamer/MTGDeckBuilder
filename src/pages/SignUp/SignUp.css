@@ -3,16 +3,6 @@ body {
     font-family: Arial, sans-serif;
 }
 
-.register.background {
-    background-image: url('/src/assets/mtg wallpaper.png');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    /* align-items: center; */
-}
-
 .form-container {
     background: rgba(38, 38, 38, 0.88);
     padding: 60px 40px;
@@ -25,7 +15,6 @@ body {
     border: 2px solid rgba(255, 255, 255, 100);
     margin-left: 35px;
     margin-bottom: 50px;
-
 }
 
 .form-container h2 {

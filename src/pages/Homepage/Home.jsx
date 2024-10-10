@@ -9,7 +9,7 @@ function Home() {
                 when you found a card you like you will have the option to save the card as favorite or you can start building your own deck. when you  build your deck you can save  up to 60 cards. after you build your deck you can save it to your profile or you can export your deck to a pdf file so you can go to the store to buy the missing  cards. </section>
             </div>
         </main>
-)
+    )
 }
 
 export default  Home;
