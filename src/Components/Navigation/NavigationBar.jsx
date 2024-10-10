@@ -1,14 +1,14 @@
 import './NavigationBar.css';
 import { NavLink, useNavigate } from "react-router-dom";
+import { useAuth } from '../../contexts/AuthContext';
 
 function NavigationBar() {
-
-    const getToken = () => localStorage.getItem('token');
+    const { user, logout } = useAuth();
 
     const navigate = useNavigate();
     const handleLogout = (e) => {
         e.preventDefault();
-        localStorage.clear();
+        logout();
         navigate('/signin');
     };
 
@@ -21,7 +21,7 @@ function NavigationBar() {
                     </li>
                 </ul>
 
-                { getToken() ? (
+                { user ? (
                     <ul className="navBar2">
                         <li>
                             <NavLink to="/search" className="button1">Search</NavLink>

@@ -2,6 +2,7 @@ import  { useState, useEffect } from 'react';
 import axios from 'axios';
 import Pagination from '../../Components/Pagination.jsx';
 import Modal from '../../Components/Modal/Modal.jsx';
+import './Search.css';
 
 const CardSearch = () => {
     const [name, setName] = useState('');
@@ -67,7 +68,7 @@ const CardSearch = () => {
     };
 
     return (
-        <div className="background">
+        <div className="search background">
             <div className='page-content'>
                 <div className="search-container">
                     <input

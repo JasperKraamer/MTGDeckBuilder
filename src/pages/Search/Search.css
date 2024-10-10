@@ -1,11 +1,15 @@
-.background {
+.search.background {
+    background: url('src/assets/mtg wallpaper.png') no-repeat center center;
     display: flex;
     flex-direction: column;
     height: 100vh;
     width: 100%;
 }
+.search {
+    background: url('src/assets/mtg wallpaper.png') no-repeat center center;
+}
 
-.search-container {
+.search .search-container {
     height: 10%;
     width: 100%;
     display: flex;
@@ -16,7 +20,7 @@
     box-sizing: border-box;
 }
 
-.kaartjes {
+.search .kaartjes {
     height: 90%;
     width: 100%;
     overflow-y: auto;
@@ -28,7 +32,7 @@
     align-items: flex-start;
 }
 
-.search-result {
+.search .search-result {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -43,7 +47,7 @@
     align-items: flex-start;
 }
 
-.card-item {
+.search .card-item {
     background-color: rgba(255, 255, 255, 100);
     border: 1px solid rgba(255, 255, 255, 100);
     padding: 10px;
@@ -53,12 +57,12 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.card-item h2 h3 {
+.search .card-item h2 h3 {
     font-size: 16px;
     margin-bottom: 10px;
 }
 
-.card-item button {
+.search .card-item button {
     display: block;
     margin: 5px 0;
     width: 100%;

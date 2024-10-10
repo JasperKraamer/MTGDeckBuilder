@@ -10,11 +10,11 @@ import Search from "./pages/Search/Search.jsx";
 import Teaser from "./Components/Teaser/Teaser.jsx"
 import Footer from "./Components/Footer/Footer.jsx"
 import PrivateRoute from "./Components/PrivateRoute.jsx";
-
+import { AuthProvider } from './contexts/AuthContext';
 
 function App() {
     return (
-    <>
+    <AuthProvider>
         <NavigationBar />
         <Teaser />
 
@@ -31,7 +31,7 @@ function App() {
 
         <Footer />
 
-    </>
+    </AuthProvider>
   )
 }
 

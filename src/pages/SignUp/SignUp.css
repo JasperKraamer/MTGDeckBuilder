@@ -3,14 +3,14 @@ body {
     font-family: Arial, sans-serif;
 }
 
-.background {
+.register.background {
     background-image: url('/src/assets/mtg wallpaper.png');
     background-size: cover;
     background-position: center;
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
 }
 
 .form-container {
