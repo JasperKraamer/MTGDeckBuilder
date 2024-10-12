@@ -88,6 +88,7 @@ const SignUp = () => {
                     {passwordError && <div className="error">{passwordError}</div>}
 
                     <button type="submit">Register</button>
+
                 </form>
             </div>
         </div>
